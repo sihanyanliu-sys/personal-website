@@ -1,0 +1,444 @@
+<!doctype html>
+<html lang="zh-CN">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Sihanyan Liu | Analytical Portfolio</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link href="https://fonts.googleapis.com/css2?family=DM+Serif+Display:ital@0;1&family=Manrope:wght@400;500;600;700;800&display=swap" rel="stylesheet" />
+    <link rel="stylesheet" href="styles.css" />
+  </head>
+  <body>
+    <header class="site-header">
+      <a class="brand" href="#cover" aria-label="Back to cover">
+        <span class="brand-mark">SL</span>
+        <span>Sihanyan Liu</span>
+      </a>
+      <nav class="nav-links" aria-label="Primary navigation">
+        <a href="#education">Education</a>
+        <a href="#experience">Experience</a>
+        <a href="#ai">AI</a>
+        <a href="#about">About</a>
+        <a href="#contact">Contact</a>
+      </nav>
+    </header>
+
+    <main>
+      <section class="cover section" id="cover">
+        <div class="cover-copy reveal">
+          <p class="eyebrow">Economics + Finance + Data Analytics</p>
+          <h1>Sihanyan Liu</h1>
+          <p class="cover-lede">
+            Turning complex business data into structured models, investment insights,
+            and decision-ready narratives.
+          </p>
+          <div class="signature-row">
+            <span>UCLA MQE</span>
+            <span>Central University of Finance and Economics</span>
+            <span>Investment Research</span>
+          </div>
+          <div class="cover-actions">
+            <a class="primary-btn" href="#experience">View work</a>
+            <a class="ghost-btn" href="assets/resume.pdf" target="_blank" rel="noreferrer">Resume PDF</a>
+          </div>
+        </div>
+
+        <div class="hero-board reveal" aria-label="Portfolio preview board">
+          <button class="floating-card card-a image-trigger" data-img="assets/6.png" data-caption="Walmart advertising performance dashboard">
+            <img src="assets/6.png" alt="Walmart advertising performance dashboard" />
+            <span>Campaign Analytics</span>
+          </button>
+          <button class="floating-card card-b image-trigger" data-img="assets/4.png" data-caption="Python API pipeline for order data extraction">
+            <img src="assets/4.png" alt="Python API pipeline for order data extraction" />
+            <span>API Pipeline</span>
+          </button>
+          <button class="floating-card card-c image-trigger" data-img="assets/13.jpeg" data-caption="AI computing power demand research deck">
+            <img src="assets/13.jpeg" alt="AI computing power demand research deck" />
+            <span>Research Deck</span>
+          </button>
+          <div class="metric-strip">
+            <span>331K+</span>
+            <small>cloud database order records</small>
+          </div>
+        </div>
+      </section>
+
+      <section class="section education" id="education">
+        <div class="section-heading reveal">
+          <p class="eyebrow">Education</p>
+          <h2>Quantitative training with finance roots.</h2>
+        </div>
+        <div class="education-grid">
+          <article class="school-card reveal">
+            <img src="assets/1.jpeg" alt="UCLA MQE orientation" />
+            <div class="school-content">
+              <p class="school-year">UCLA</p>
+              <h3>Master of Quantitative Economics</h3>
+              <p>Applied economics, empirical analysis, and data-driven decision modeling.</p>
+              <div class="hover-panel">
+                <strong>Courses & Skills</strong>
+                <span>Econometrics</span>
+                <span>Python Analytics</span>
+                <span>Statistical Modeling</span>
+                <span>Forecasting</span>
+                <span>Applied Microeconomics</span>
+              </div>
+            </div>
+          </article>
+
+          <article class="school-card reveal">
+            <img src="assets/2.jpeg" alt="Graduation photo at Central University of Finance and Economics" />
+            <div class="school-content">
+              <p class="school-year">CUFE</p>
+              <h3>Central University of Finance and Economics</h3>
+              <p>Finance foundation across accounting, valuation, corporate finance, and research.</p>
+              <div class="hover-panel">
+                <strong>Courses & Skills</strong>
+                <span>Corporate Finance</span>
+                <span>Financial Statement Analysis</span>
+                <span>Valuation</span>
+                <span>Investment Research</span>
+                <span>Excel Modeling</span>
+              </div>
+            </div>
+          </article>
+        </div>
+      </section>
+
+      <section class="section experience" id="experience">
+        <div class="section-heading reveal">
+          <p class="eyebrow">Experience</p>
+          <h2>Selected case studies linked to portfolio evidence.</h2>
+        </div>
+
+        <div class="case-list">
+          <article class="case-card reveal open">
+            <button class="case-top" type="button" aria-expanded="true">
+              <span class="case-index">01</span>
+              <span>
+                <strong>MagnaKom</strong>
+                <small>E-commerce data operations, advertising analytics, and profitability dashboard</small>
+              </span>
+              <span class="toggle-icon">+</span>
+            </button>
+            <div class="case-body">
+              <div class="case-copy">
+                <h3>Built a cleaner operating picture from API data, ads metrics, and channel profitability.</h3>
+                <p>
+                  Automated order extraction through API requests, cleaned and structured transaction data,
+                  and maintained cloud database records for business reporting. Analyzed Walmart campaign
+                  performance across impressions, clicks, CPC, CTR, ad spend, orders, and conversion metrics.
+                  Designed a profit analysis dashboard to consolidate sales, cost, profit, expense, ROI, and
+                  channel mix into a clearer operating view.
+                </p>
+                <div class="tags">
+                  <span>Python</span><span>Pandas</span><span>API</span><span>MySQL</span><span>Advertising ROI</span><span>Dashboard</span>
+                </div>
+              </div>
+              <div class="artifact-grid">
+                <button class="artifact image-trigger" data-img="assets/3.png" data-caption="API response and order data extraction">
+                  <img src="assets/3.png" alt="API response and order data extraction" /><span>API response</span>
+                </button>
+                <button class="artifact image-trigger" data-img="assets/4.png" data-caption="Python script for paginated API order fetching">
+                  <img src="assets/4.png" alt="Python script for paginated API order fetching" /><span>Python pipeline</span>
+                </button>
+                <button class="artifact image-trigger" data-img="assets/5.jpeg" data-caption="MySQL cloud database order count">
+                  <img src="assets/5.jpeg" alt="MySQL cloud database order count" /><span>Cloud database</span>
+                </button>
+                <button class="artifact image-trigger" data-img="assets/6.png" data-caption="Walmart campaign performance dashboard">
+                  <img src="assets/6.png" alt="Walmart campaign performance dashboard" /><span>Walmart dashboard</span>
+                </button>
+                <button class="artifact image-trigger" data-img="assets/7.jpeg" data-caption="Keyword-level advertising performance table">
+                  <img src="assets/7.jpeg" alt="Keyword-level advertising performance table" /><span>Keyword analysis</span>
+                </button>
+                <button class="artifact image-trigger" data-img="assets/8.png" data-caption="Profitability dashboard by sales channel">
+                  <img src="assets/8.png" alt="Profitability dashboard by sales channel" /><span>Profit dashboard</span>
+                </button>
+              </div>
+            </div>
+          </article>
+
+          <article class="case-card reveal">
+            <button class="case-top" type="button" aria-expanded="false">
+              <span class="case-index">02</span>
+              <span>
+                <strong>Great Wall Securities</strong>
+                <small>Financial modeling, industry research, and strategic investment support</small>
+              </span>
+              <span class="toggle-icon">+</span>
+            </button>
+            <div class="case-body">
+              <div class="case-copy">
+                <h3>Translated financial statements and industrial data into investable logic.</h3>
+                <p>
+                  Systematically organized five-year financial and operating data of leading enterprises,
+                  decomposed profit structure and cost drivers, and built an automated earnings forecast model.
+                  For the quartz crucible industry project, mapped the industry chain, identified core technology
+                  barriers, analyzed supply-demand dynamics and cost structure, and contributed to a 55-page
+                  report supporting a RMB 500 million strategic investment decision.
+                </p>
+                <div class="tags">
+                  <span>Financial Modeling</span><span>Profit Forecast</span><span>Cost Drivers</span><span>Industry Chain</span><span>Strategic Investment</span>
+                </div>
+              </div>
+              <div class="artifact-grid">
+                <button class="artifact wide image-trigger" data-img="assets/9.png" data-caption="Automated financial and operating data model">
+                  <img src="assets/9.png" alt="Automated financial and operating data model" /><span>Forecast model</span>
+                </button>
+                <button class="artifact image-trigger" data-img="assets/10.png" data-caption="Quartz crucible demand and cost model">
+                  <img src="assets/10.png" alt="Quartz crucible demand and cost model" /><span>Quartz model</span>
+                </button>
+                <button class="artifact image-trigger" data-img="assets/17.png" data-caption="Quartz crucible industry research material">
+                  <img src="assets/17.png" alt="Quartz crucible industry research material" /><span>Industry report</span>
+                </button>
+              </div>
+            </div>
+          </article>
+
+          <article class="case-card reveal">
+            <button class="case-top" type="button" aria-expanded="false">
+              <span class="case-index">03</span>
+              <span>
+                <strong>Guotai Junan Securities</strong>
+                <small>Equity research, company analysis, and AI computing power strategy</small>
+              </span>
+              <span class="toggle-icon">+</span>
+            </button>
+            <div class="case-body">
+              <div class="case-copy">
+                <h3>Connected company fundamentals with sector-level demand forecasts.</h3>
+                <p>
+                  Analyzed Higer Communication's 2018-2023 financial and business structure, including revenue
+                  composition, profitability drivers, and capital investment logic. Built a computing power demand
+                  forecast model, compared self-owned versus leased computing power models, and proposed a
+                  profit-maximizing framework while studying platform differences and supply trends.
+                </p>
+                <div class="tags">
+                  <span>Equity Research</span><span>Revenue Breakdown</span><span>Scenario Analysis</span><span>AI Computing Power</span><span>Business Model</span>
+                </div>
+              </div>
+              <div class="artifact-grid">
+                <button class="artifact image-trigger" data-img="assets/11.png" data-caption="Higer Communication profitability and return analysis">
+                  <img src="assets/11.png" alt="Higer Communication profitability and return analysis" /><span>Company analysis</span>
+                </button>
+                <button class="artifact image-trigger" data-img="assets/12.png" data-caption="Communication sector weekly research excerpt">
+                  <img src="assets/12.png" alt="Communication sector weekly research excerpt" /><span>Sector brief</span>
+                </button>
+                <button class="artifact image-trigger" data-img="assets/13.jpeg" data-caption="AI model computing demand growth research">
+                  <img src="assets/13.jpeg" alt="AI model computing demand growth research" /><span>Demand forecast</span>
+                </button>
+                <button class="artifact image-trigger" data-img="assets/14.jpeg" data-caption="AI server GPU usage and cost structure analysis">
+                  <img src="assets/14.jpeg" alt="AI server GPU usage and cost structure analysis" /><span>Cost structure</span>
+                </button>
+              </div>
+            </div>
+          </article>
+
+          <article class="case-card reveal">
+            <button class="case-top" type="button" aria-expanded="false">
+              <span class="case-index">04</span>
+              <span>
+                <strong>PwC</strong>
+                <small>Audit support, financial review workflow, and evidence-based documentation</small>
+              </span>
+              <span class="toggle-icon">+</span>
+            </button>
+            <div class="case-body">
+              <div class="case-copy">
+                <h3>Strengthened the discipline behind financial data: verify first, then analyze.</h3>
+                <p>
+                  Supported financial review work by organizing audit evidence, checking account-level
+                  consistency, reconciling supporting materials, and documenting review notes in a structured
+                  working-paper style. This experience added an audit mindset to later investment research and
+                  analytics work: every conclusion should be traceable to reliable source evidence.
+                </p>
+                <div class="tags">
+                  <span>Audit Support</span><span>Financial Review</span><span>Evidence Collection</span><span>Reconciliation</span><span>Risk Notes</span>
+                </div>
+              </div>
+              <div class="artifact-grid">
+                <button class="artifact wide image-trigger" data-img="assets/pwc-visual.svg" data-caption="PwC financial review workflow illustration">
+                  <img src="assets/pwc-visual.svg" alt="PwC financial review workflow illustration" /><span>Audit workflow</span>
+                </button>
+              </div>
+            </div>
+          </article>
+
+          <article class="case-card reveal">
+            <button class="case-top" type="button" aria-expanded="false">
+              <span class="case-index">05</span>
+              <span>
+                <strong>China Securities (CSC)</strong>
+                <small>Securities research, market tracking, and company analysis support</small>
+              </span>
+              <span class="toggle-icon">+</span>
+            </button>
+            <div class="case-body">
+              <div class="case-copy">
+                <h3>Connected market signals with company fundamentals and research conclusions.</h3>
+                <p>
+                  Supported securities research work through market data tracking, company information
+                  collection, peer comparison, valuation logic organization, and investment memo preparation.
+                  The role strengthened the ability to turn scattered market updates and financial indicators
+                  into concise research takeaways for analysts and decision makers.
+                </p>
+                <div class="tags">
+                  <span>Securities Research</span><span>Market Tracking</span><span>Company Analysis</span><span>Peer Comparison</span><span>Investment Memo</span>
+                </div>
+              </div>
+              <div class="artifact-grid">
+                <button class="artifact wide image-trigger" data-img="assets/csc-visual.svg" data-caption="China Securities research desk workflow illustration">
+                  <img src="assets/csc-visual.svg" alt="China Securities research desk workflow illustration" /><span>Research workflow</span>
+                </button>
+              </div>
+            </div>
+          </article>
+
+          <article class="case-card reveal">
+            <button class="case-top" type="button" aria-expanded="false">
+              <span class="case-index">06</span>
+              <span>
+                <strong>Uber Entry & Public Transit Research</strong>
+                <small>Two-way fixed effects panel data analysis on substitution effects</small>
+              </span>
+              <span class="toggle-icon">+</span>
+            </button>
+            <div class="case-body">
+              <div class="case-copy">
+                <h3>Studied whether ride-hailing entry substitutes for traditional public transit.</h3>
+                <p>
+                  Conducted a panel data research project on the effect of Uber's market entry on public transit
+                  ridership across U.S. transit agencies from 2004 to 2015. The project framed a causal research
+                  question, organized agency-level panel data, applied two-way fixed effects regression, and
+                  interpreted event-study patterns, robustness checks, and policy implications.
+                </p>
+                <div class="tags">
+                  <span>Panel Data</span><span>Two-Way Fixed Effects</span><span>Event Study</span><span>Urban Economics</span><span>Policy Insight</span>
+                </div>
+              </div>
+              <div class="artifact-grid">
+                <button class="artifact wide infographic image-trigger" data-img="assets/uber-transit-study.png" data-caption="Uber market entry and public transit substitution research poster">
+                  <img src="assets/uber-transit-study.png" alt="Uber market entry and public transit substitution research poster" /><span>Research poster</span>
+                </button>
+              </div>
+            </div>
+          </article>
+
+          <article class="case-card reveal">
+            <button class="case-top" type="button" aria-expanded="false">
+              <span class="case-index">07</span>
+              <span>
+                <strong>Innovation & Entrepreneurship Competition</strong>
+                <small>Empirical analysis of spin-off listings and minority shareholder interests</small>
+              </span>
+              <span class="toggle-icon">+</span>
+            </button>
+            <div class="case-body">
+              <div class="case-copy">
+                <h3>Built a competition project around policy impact, capital markets, and shareholder protection.</h3>
+                <p>
+                  Developed an empirical research and presentation project on how spin-off listings influence
+                  minority shareholder interests. The project combined sample construction, PSM-DID matching,
+                  data supplementation, regression analysis, mechanism testing, and policy interpretation to
+                  explain how information transparency and company value channels may affect shareholder outcomes.
+                </p>
+                <div class="tags">
+                  <span>PSM-DID</span><span>Capital Markets</span><span>Python</span><span>Excel</span><span>Stata</span><span>Policy Research</span>
+                </div>
+              </div>
+              <div class="artifact-grid">
+                <button class="artifact wide infographic image-trigger" data-img="assets/innovation-competition-study.png" data-caption="Innovation and entrepreneurship competition research poster">
+                  <img src="assets/innovation-competition-study.png" alt="Innovation and entrepreneurship competition research poster" /><span>Competition project</span>
+                </button>
+              </div>
+            </div>
+          </article>
+        </div>
+      </section>
+
+      <section class="section ai-section" id="ai">
+        <div class="section-heading reveal">
+          <p class="eyebrow">AI Workflow</p>
+          <h2>Using AI as a research, analytics, and production amplifier.</h2>
+          <p>
+            I use AI to accelerate structured research, transform messy information into analytical frameworks,
+            prototype visual narratives, and improve the speed of data-to-decision workflows.
+          </p>
+        </div>
+        <div class="ai-layout reveal">
+          <div class="ai-copy">
+            <article>
+              <span>01</span>
+              <h3>Research synthesis</h3>
+              <p>Turn reports, market updates, and fragmented notes into structured hypotheses, comparison tables, and memo outlines.</p>
+            </article>
+            <article>
+              <span>02</span>
+              <h3>Data workflow support</h3>
+              <p>Use AI to draft data-cleaning logic, explain code, debug analysis steps, and document repeatable workflows.</p>
+            </article>
+            <article>
+              <span>03</span>
+              <h3>Visual storytelling</h3>
+              <p>Translate findings into dashboards, research posters, and portfolio-ready narratives that are easier to inspect and share.</p>
+            </article>
+          </div>
+          <div class="ai-frame-card">
+            <iframe title="AI Capability Map" src="assets/ai-capability-map.html"></iframe>
+          </div>
+        </div>
+      </section>
+
+      <section class="section about" id="about">
+        <div class="section-heading reveal">
+          <p class="eyebrow">About</p>
+          <h2>A finance analyst who can build the data layer behind the story.</h2>
+        </div>
+        <div class="about-grid">
+          <article class="about-card reveal">
+            <span>01</span>
+            <h3>Data Builder</h3>
+            <p>API extraction, data cleaning, database maintenance, and dashboard-ready operating datasets.</p>
+          </article>
+          <article class="about-card reveal">
+            <span>02</span>
+            <h3>Financial Analyst</h3>
+            <p>Financial statement analysis, profit decomposition, cost driver logic, and forecast modeling.</p>
+          </article>
+          <article class="about-card reveal">
+            <span>03</span>
+            <h3>Research Storyteller</h3>
+            <p>Industry mapping, competitive analysis, business model comparison, and investment narratives.</p>
+          </article>
+        </div>
+      </section>
+
+      <section class="section contact" id="contact">
+        <div class="contact-panel reveal">
+          <p class="eyebrow">Contact</p>
+          <h2>Let's connect the model to the decision.</h2>
+          <p>
+            Open to opportunities in investment research, financial analysis, business analytics,
+            and data-driven strategy roles. Email: 18609000086@163.com.
+          </p>
+          <div class="contact-actions">
+            <a class="primary-btn" href="mailto:18609000086@163.com">Email me</a>
+            <a class="ghost-btn" href="http://www.linkedin.com/in/sihanyan-liu" target="_blank" rel="noreferrer">LinkedIn</a>
+            <a class="ghost-btn" href="assets/resume.pdf" target="_blank" rel="noreferrer">Download resume</a>
+          </div>
+        </div>
+      </section>
+    </main>
+
+    <div class="lightbox" aria-hidden="true">
+      <button class="lightbox-close" type="button" aria-label="Close image preview">×</button>
+      <figure>
+        <img src="" alt="" />
+        <figcaption></figcaption>
+      </figure>
+    </div>
+
+    <script src="script.js"></script>
+  </body>
+</html>

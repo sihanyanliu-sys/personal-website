@@ -1,0 +1,361 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>AI Capability Map</title>
+  <style>
+    :root {
+      --bg: #f7f8fb;
+      --card: #ffffff;
+      --text: #1f2937;
+      --muted: #6b7280;
+      --line: #dbe1ea;
+      --blue: #2563eb;
+      --purple: #7c3aed;
+      --green: #059669;
+      --orange: #ea580c;
+      --shadow: 0 18px 45px rgba(15, 23, 42, 0.10);
+    }
+
+    * {
+      box-sizing: border-box;
+    }
+
+    body {
+      margin: 0;
+      font-family: Inter, -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
+      background: var(--bg);
+      color: var(--text);
+    }
+
+    .ai-map-section {
+      max-width: 1180px;
+      margin: 0 auto;
+      padding: 72px 24px;
+    }
+
+    .section-header {
+      text-align: center;
+      margin-bottom: 44px;
+    }
+
+    .eyebrow {
+      display: inline-block;
+      padding: 7px 14px;
+      border-radius: 999px;
+      background: rgba(37, 99, 235, 0.10);
+      color: var(--blue);
+      font-size: 13px;
+      font-weight: 700;
+      letter-spacing: 0.08em;
+      text-transform: uppercase;
+      margin-bottom: 14px;
+    }
+
+    h1 {
+      margin: 0;
+      font-size: clamp(32px, 5vw, 56px);
+      line-height: 1.05;
+      letter-spacing: -0.045em;
+    }
+
+    .subtitle {
+      max-width: 780px;
+      margin: 18px auto 0;
+      color: var(--muted);
+      font-size: 17px;
+      line-height: 1.7;
+    }
+
+    .role-bar {
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+      gap: 18px;
+      margin-bottom: 34px;
+    }
+
+    .role-card {
+      background: var(--card);
+      border: 1px solid var(--line);
+      border-radius: 24px;
+      padding: 22px;
+      box-shadow: var(--shadow);
+      text-align: center;
+    }
+
+    .role-icon {
+      width: 46px;
+      height: 46px;
+      border-radius: 16px;
+      display: grid;
+      place-items: center;
+      margin: 0 auto 14px;
+      font-size: 22px;
+      background: #eef2ff;
+    }
+
+    .role-card h3 {
+      margin: 0 0 8px;
+      font-size: 18px;
+    }
+
+    .role-card p {
+      margin: 0;
+      color: var(--muted);
+      font-size: 14px;
+      line-height: 1.6;
+    }
+
+    .map-grid {
+      position: relative;
+      display: grid;
+      grid-template-columns: repeat(4, 1fr);
+      gap: 18px;
+      margin: 32px 0;
+    }
+
+    .capability-card {
+      background: var(--card);
+      border: 1px solid var(--line);
+      border-radius: 28px;
+      padding: 24px;
+      min-height: 360px;
+      box-shadow: var(--shadow);
+      position: relative;
+      overflow: hidden;
+    }
+
+    .capability-card::before {
+      content: "";
+      position: absolute;
+      top: 0;
+      left: 0;
+      right: 0;
+      height: 6px;
+      background: var(--accent);
+    }
+
+    .tag {
+      display: inline-flex;
+      align-items: center;
+      gap: 8px;
+      font-size: 13px;
+      font-weight: 700;
+      color: var(--accent);
+      margin-bottom: 14px;
+    }
+
+    .tag span {
+      width: 10px;
+      height: 10px;
+      border-radius: 999px;
+      background: var(--accent);
+    }
+
+    .capability-card h2 {
+      margin: 0 0 12px;
+      font-size: 21px;
+      letter-spacing: -0.02em;
+    }
+
+    .capability-card .desc {
+      margin: 0 0 18px;
+      color: var(--muted);
+      font-size: 14px;
+      line-height: 1.65;
+    }
+
+    .item-list {
+      list-style: none;
+      padding: 0;
+      margin: 0;
+      display: grid;
+      gap: 10px;
+    }
+
+    .item-list li {
+      padding: 11px 12px;
+      border-radius: 15px;
+      background: #f9fafb;
+      color: #374151;
+      font-size: 14px;
+      line-height: 1.45;
+      border: 1px solid #eef0f4;
+    }
+
+    .value-layer {
+      margin-top: 34px;
+      background: linear-gradient(135deg, #111827, #1f2937);
+      color: #ffffff;
+      border-radius: 30px;
+      padding: 30px;
+      box-shadow: var(--shadow);
+    }
+
+    .value-layer h2 {
+      margin: 0 0 22px;
+      text-align: center;
+      font-size: 26px;
+      letter-spacing: -0.02em;
+    }
+
+    .value-grid {
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+      gap: 16px;
+    }
+
+    .value-card {
+      padding: 22px;
+      border-radius: 22px;
+      background: rgba(255,255,255,0.08);
+      border: 1px solid rgba(255,255,255,0.12);
+    }
+
+    .value-card h3 {
+      margin: 0 0 9px;
+      font-size: 18px;
+    }
+
+    .value-card p {
+      margin: 0;
+      color: rgba(255,255,255,0.72);
+      font-size: 14px;
+      line-height: 1.6;
+    }
+
+    .footer-note {
+      margin-top: 28px;
+      text-align: center;
+      color: var(--muted);
+      font-size: 14px;
+    }
+
+    @media (max-width: 980px) {
+      .role-bar,
+      .map-grid,
+      .value-grid {
+        grid-template-columns: 1fr 1fr;
+      }
+    }
+
+    @media (max-width: 640px) {
+      .ai-map-section {
+        padding: 48px 16px;
+      }
+
+      .role-bar,
+      .map-grid,
+      .value-grid {
+        grid-template-columns: 1fr;
+      }
+
+      .capability-card {
+        min-height: auto;
+      }
+    }
+  </style>
+</head>
+<body>
+  <section class="ai-map-section">
+    <div class="section-header">
+      <div class="eyebrow">AI Capability Map</div>
+      <h1>How I Use AI to Build, Analyze, and Decide</h1>
+      <p class="subtitle">
+        I use AI not only as a productivity tool, but also as a technical copilot and analytical partner — helping me turn business problems into automated workflows, data products, and decision-ready insights.
+      </p>
+    </div>
+
+    <div class="role-bar">
+      <div class="role-card">
+        <div class="role-icon">⚙️</div>
+        <h3>Execution Engine</h3>
+        <p>Automates repetitive workflows and accelerates project delivery.</p>
+      </div>
+      <div class="role-card">
+        <div class="role-icon">💻</div>
+        <h3>Technical Copilot</h3>
+        <p>Supports coding, debugging, model building, and product prototyping.</p>
+      </div>
+      <div class="role-card">
+        <div class="role-icon">📊</div>
+        <h3>Decision Assistant</h3>
+        <p>Transforms scattered information into structured analysis and business insights.</p>
+      </div>
+    </div>
+
+    <div class="map-grid">
+      <div class="capability-card" style="--accent: var(--blue);">
+        <div class="tag"><span></span> Web Coding & Automation</div>
+        <h2>From workflow pain points to usable tools</h2>
+        <p class="desc">Using AI-assisted coding to build lightweight tools, automate reporting processes, and create web-based prototypes.</p>
+        <ul class="item-list">
+          <li>Valuation table auto-filling system built in Codex</li>
+          <li>Monthly analysis report generation workflow</li>
+          <li>Personal resume / portfolio website development</li>
+          <li>HTML, CSS, Python, and API-based task automation</li>
+        </ul>
+      </div>
+
+      <div class="capability-card" style="--accent: var(--purple);">
+        <div class="tag"><span></span> Machine Learning Support</div>
+        <h2>From business requirements to model pipelines</h2>
+        <p class="desc">When the analytical goal and business logic are clear, AI helps accelerate model construction, code adjustment, and interpretation.</p>
+        <ul class="item-list">
+          <li>Build forecasting models such as XGBoost, LSTM, and TFT</li>
+          <li>Assist with feature engineering and model selection</li>
+          <li>Debug errors and refine training / testing pipelines</li>
+          <li>Interpret model outputs and translate results into business language</li>
+        </ul>
+      </div>
+
+      <div class="capability-card" style="--accent: var(--green);">
+        <div class="tag"><span></span> Data Analysis & Dashboarding</div>
+        <h2>From raw data to visual decision support</h2>
+        <p class="desc">AI helps me structure analysis logic, design metrics, and improve the storytelling of dashboards and analytical reports.</p>
+        <ul class="item-list">
+          <li>SQL and Python analysis assistant</li>
+          <li>Dashboard design for sales, inventory, and advertising KPIs</li>
+          <li>Metrics such as GMV, ROAS, CTR, conversion rate, and margin</li>
+          <li>Automated chart explanations and management-ready summaries</li>
+        </ul>
+      </div>
+
+      <div class="capability-card" style="--accent: var(--orange);">
+        <div class="tag"><span></span> Research & Knowledge Augmentation</div>
+        <h2>From information search to structured insight</h2>
+        <p class="desc">AI expands my research capacity by helping me synthesize industry, company, policy, and market information into clear frameworks.</p>
+        <ul class="item-list">
+          <li>Company and industry research support</li>
+          <li>Policy and regulatory material summarization</li>
+          <li>Consulting-style problem decomposition</li>
+          <li>Prompt engineering and iterative refinement</li>
+        </ul>
+      </div>
+    </div>
+
+    <div class="value-layer">
+      <h2>Value Created Through Human–AI Collaboration</h2>
+      <div class="value-grid">
+        <div class="value-card">
+          <h3>Productivity Amplification</h3>
+          <p>Reduce repetitive work, accelerate coding and analysis, and deliver outputs faster.</p>
+        </div>
+        <div class="value-card">
+          <h3>Skill Boundary Expansion</h3>
+          <p>Bridge business, data, and technical work even without a pure computer science background.</p>
+        </div>
+        <div class="value-card">
+          <h3>Decision Intelligence</h3>
+          <p>Use AI to structure problems, compare options, and convert analysis into actionable decisions.</p>
+        </div>
+      </div>
+    </div>
+
+    <p class="footer-note">
+      Core mindset: I do not use AI to replace thinking — I use it to accelerate execution, test ideas, and strengthen analytical judgment.
+    </p>
+  </section>
+</body>
+</html>
